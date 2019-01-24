@@ -1,0 +1,119 @@
+.navbar {
+    height:80px;
+    background-color:#17083c;
+}
+#Search{
+    width:500px;
+}
+#courses{
+    background-color: #f4f4f8;
+}
+
+footer{
+    height:400px;
+
+    background-color:#17083c;
+}
+#foot{
+    color:white;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right: 60px;
+}
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    
+    color:#38454e;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    
+    color: #38454e;
+  }
+  .fa-youtube{
+      color:#38454e;
+  }
+  .container {
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .text-block {
+    position: absolute;
+    bottom: 170px;
+    left: 310px;
+    /*background-color: black;
+    opacity: 0.3;*/
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+  }
+
+  .img-overlay{
+      background-color:#465663;
+      
+      
+  }
+
+  .img-overlay img{
+    opacity: 0.4;
+    height: 700px;
+    width:100%;
+   
+  }
+  ul li{
+      display: inline;
+      text-decoration: none;
+      margin:0;
+      padding:0;
+     
+  }
+  li a{
+    color:grey; 
+    /*border-right: 2px solid #bbb;*/
+     
+  }
+  .container fluid{
+      width: 100%;
+  }
+  .col-xs-12{
+ width:100%;
+  position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #header{
+      width:100%;
+      background-color: #17083c;
+  }
+  .input-grp input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;}
+
+    /*header name styling*/
+
+
+.hname{
+    color: white;
+}
