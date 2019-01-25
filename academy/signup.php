@@ -11,17 +11,23 @@ $email =    mysqli_real_escape_string($db ,$_POST['email']);
 $password =  mysqli_real_escape_string($db, $_POST['password']);
 $password2  =  mysqli_real_escape_string($db, $_POST['password2']);
 
+$query="SELECT email FROM `users`WHERE email='$email' ";
+$result = mysqli_query($db, $query);
+if (mysqli_num_rows($result)>0) 
+    { 
+        // it return number of rows in the table. 
+        //$row = mysqli_num_rows($result); 
+       // printf("Number of row in the table : " . $row); 
+    
+       echo 'email exist';
+    }
+else{
 
-   if($password == $password2){
+
+  if($password == $password2){
 
        $password = md5($password);
-   }
-      elseif (mysqli_num_rows ($email)>0){
-       
-        echo "Email Already Exist";
-        }
-       
-      
+   
        $sql = "INSERT INTO users(name,email,password)VALUES('$name','$email','$password')";
 
        mysqli_query($db,$sql);
@@ -30,17 +36,18 @@ $password2  =  mysqli_real_escape_string($db, $_POST['password2']);
        echo $_SESSION['message'];
        $_SESSION['name']  = $name;
       
-      header("Location:home.php");
-   }
+      //header("Location:home.php");
+    }
+    
 
     else{
-     $_SESSION['message'] = "The two passwords do not match";
-     echo $_SESSION['message'];
-
-    }
+        $_SESSION['message'] = "The two passwords do not match";
+        echo $_SESSION['message'];
+    
+       }
    
-
-
+    }
+}
 ?>
 
 
