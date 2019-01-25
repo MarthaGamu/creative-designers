@@ -57,16 +57,9 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
   </form>
-  <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Signin</button>
+  <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><a href="login.php">Signin</a></button>
   <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><a href="signup.php">Signup</a></button>
-  
-  <div class="hname">
-  <?php
-echo"Welcome ";
-echo $_SESSION['name'];
-
-?>
-</div>
+ 
      
       </nav>
  

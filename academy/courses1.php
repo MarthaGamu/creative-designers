@@ -1,6 +1,6 @@
 <?php
-//session_start();
-//include'header2.php';
+session_start();
+include'header2.php';
 
 ?>
   <div id="courses">

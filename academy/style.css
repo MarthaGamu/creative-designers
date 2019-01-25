@@ -117,3 +117,10 @@ footer{
 .hname{
     color: white;
 }
+
+/*register table align*/
+table.regy{
+    margin-left:auto; 
+    margin-right:auto;
+    padding-bottom: 50px;
+}

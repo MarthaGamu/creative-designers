@@ -15,6 +15,12 @@ $password2  =  mysqli_real_escape_string($db, $_POST['password2']);
    if($password == $password2){
 
        $password = md5($password);
+   }
+      elseif (mysqli_num_rows ($email)>0){
+       
+        echo "Email Already Exist";
+        }
+       
       
        $sql = "INSERT INTO users(name,email,password)VALUES('$name','$email','$password')";
 
@@ -34,44 +40,39 @@ $password2  =  mysqli_real_escape_string($db, $_POST['password2']);
     }
    
 
-}
+
 ?>
 
 
 
-<div class ="regy">
-    <h1> Register </h1>
+<table class ="regy">
 
-</div>
-
-
-
-
-<table>
-    
 <form action='signup.php' method='post'>
+<tr><td><h1> Register </h1></td></tr>
 <tr>
 <td>Name: </td>
-<td><input type="text" name="name" class="textInput"></td>
+<td><input type="text" name="name" class="textInput" required></td>
 
 </tr>
 <tr>
 <td>Email: </td>
-<td><input type="email" name="email" class="textInput"></td>
+<td><input type="email" name="email" class="textInput" required></td>
 
 </tr>
 <tr>
 <td>Password: </td>
-<td><input type="password" name="password" class="textInput"></td>
+<td><input type="password" name="password" class="textInput" required></td>
 <tr>
 <td>Confirm Password: </td>
-<td><input type="password" name="password2" class="textInput"></td>
+<td><input type="password" name="password2" class="textInput" required></td>
 
 </tr>
 <tr>
-<td><input type="submit" name="submit" class="textInput"><td>
+<td><input type="submit" name="submit" class="textInput" required><td>
 </tr>
-
+<tr>
+    <td><a href="forgotpassword.php">Forgot Password</a></td>
+</tr>
 
 </form>
 </table>
